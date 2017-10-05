@@ -1,0 +1,2 @@
+cmake -G "MinGW Makefiles" -D CMAKE_BUILD_TYPE=Debug -DCMAKE_SYSTEM_VERSION=10.0.10586.0 -DCMAKE_SYSTEM_NAME=Windows .
+mingw32-make

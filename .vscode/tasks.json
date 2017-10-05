@@ -2,16 +2,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "build hello world",
+            "taskName": "build address book windows",
             "type": "shell",
-            "command": "g++",
-            "args": [
-                "-g", "helloworld.cpp"
-            ],
+            "command": ".\\build_win32.bat",
             "group": {
                 "kind": "build",
-                "isDefault": true               
+                "isDefault": true
             }
+        },
+        {
+            "taskName": "build address book linux",
+            "type": "shell",
+            "command": ".\\build_linux.bat",
+            "problemMatcher": []
         }
     ]
 }
