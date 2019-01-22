@@ -4,7 +4,7 @@
         {
             "label": "build address book windows",
             "type": "shell",
-            "command": ".\\build_win32.bat",
+            "command": "./build_win32.bat",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -13,7 +13,7 @@
         {
             "label": "build address book linux",
             "type": "shell",
-            "command": ".\\build_linux.bat",
+            "command": "wsl ./build_linux.sh",
             "problemMatcher": []
         }
     ]
