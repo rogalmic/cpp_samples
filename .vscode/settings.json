@@ -5,12 +5,7 @@
     "editor.tabSize": 4,
     "editor.renderWhitespace": "all",
     "editor.trimAutoWhitespace": true,
-    "editor.autoClosingBrackets": false,
+    "editor.autoClosingBrackets": "languageDefined",
     "editor.formatOnSave": false,
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "C_Cpp.intelliSenseEngine": "Default",
-    "files.associations": {
-        "ostream": "cpp"
-    }
+    "C_Cpp.intelliSenseEngine": "Default"
 }

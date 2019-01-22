@@ -1,8 +1,7 @@
 {
-    "configurations": [
+    "configurations": [        
         {
             "name": "Win32",
-            "intelliSenseMode": "clang-x64",
             "includePath": [
                 "${workspaceRoot}",
                 "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
@@ -12,12 +11,7 @@
                 "C:/MinGW/include",
                 "C:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "__GNUC__=5",
-                "__cdecl=__attribute__((__cdecl__))"
-            ],
+            "defines": [],
             "browse": {
                 "path": [
                     "C:/MinGW/lib/gcc/mingw32/6.3.0/include",
@@ -28,6 +22,66 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Mac",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceRoot}"
+            ],
+            "defines": [],            
+            "browse": {
+                "path": [
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/../../../../include/c++/7.2.0",
+                "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/../../../../include/c++/7.2.0/x86_64-solus-linux",
+                "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/../../../../include/c++/7.2.0/backward",
+                "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/include",
+                "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/include-fixed",
+                "/usr/include",
+                "${workspaceRoot}",
+                "/usr/include/glib-2.0",
+                "${workspaceRoot}/src/lib",
+                "${workspaceRoot}/build/src/lib",
+                "${workspaceRoot}/build/",
+                "/usr/include/libusb-1.0"
+            ],
+            "defines": [],            
+            "browse": {
+                "path": [
+                    "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/../../../../include/c++/7.2.0",
+                    "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/../../../../include/c++/7.2.0/x86_64-solus-linux",
+                    "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/../../../../include/c++/7.2.0/backward",
+                    "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/include",
+                    "/usr/lib64/gcc/x86_64-solus-linux/7.2.0/include-fixed",
+                    "/usr/include",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "intelliSenseMode": "clang-x64",
             "cStandard": "c11",
             "cppStandard": "c++17"
         }
