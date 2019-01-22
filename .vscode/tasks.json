@@ -13,6 +13,12 @@
         {
             "label": "build address book linux",
             "type": "shell",
+            "command": "./build_linux.sh",
+            "problemMatcher": []
+        },
+        {
+            "label": "build address book wsl linux",
+            "type": "shell",
             "command": "wsl ./build_linux.sh",
             "problemMatcher": []
         }

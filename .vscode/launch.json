@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) Launch Win32",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/output/bin/addressbook.exe",
@@ -23,7 +23,28 @@
             "preLaunchTask": "build address book windows"
         },
         {
-            "name": "(gdb) Launch WSL",
+            "name": "(gdb) Launch Linux",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/output/bin/addressbook",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true, 
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build address book linux"
+        },
+        {
+            "name": "(gdb) Launch WSL Linux",
             "type": "cppdbg",
             "request": "launch",
             "program": "/mnt/c/Users/rogalmic/Documents/src/cpp/output/bin/addressbook",
@@ -46,7 +67,7 @@
                 "pipeArgs": ["-c"],
                 "debuggerPath": "/usr/bin/gdb"
             },
-            "preLaunchTask": "build address book linux"
+            "preLaunchTask": "build address book wsl linux"
             ,
             "sourceFileMap": {
                 "/mnt/c": "c:/"
