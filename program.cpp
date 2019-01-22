@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <limits>
 #include "addressbook_record.hpp"
 #include "addressbook.hpp"
@@ -7,6 +8,10 @@ using namespace std;
 int main(int argc, char *const argv[], char *const envp[])
 {
     addressbook book;
+
+    fstream database ("db.csv", ios::out | ios::app | ios::binary);
+
+
     auto shared = make_shared<addressbook_record>();
     book.records.push_back(shared);
 
@@ -23,7 +28,7 @@ int main(int argc, char *const argv[], char *const envp[])
         if (choice != '\0')
         {
             cout << endl << "Choice is " << choice << endl;
-        }
+        } 
     }
 
     for (int i = 0;; i++)

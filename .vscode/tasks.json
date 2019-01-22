@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "build address book windows",
+            "label": "build address book windows",
             "type": "shell",
             "command": ".\\build_win32.bat",
             "group": {
@@ -11,7 +11,7 @@
             }
         },
         {
-            "taskName": "build address book linux",
+            "label": "build address book linux",
             "type": "shell",
             "command": ".\\build_linux.bat",
             "problemMatcher": []
