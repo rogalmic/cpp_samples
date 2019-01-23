@@ -1,5 +1,2 @@
-CMake*
-!CMakeLists.txt
-Makefile
-output/
-*.exe
+unix/
+win/
