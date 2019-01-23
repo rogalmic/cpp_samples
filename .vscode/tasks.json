@@ -3,24 +3,42 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build win",
+            "label": "build win cmake",
             "type": "shell",
-            "command": "./build_win.bat",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "command": "cmake -G'MinGW Makefiles' -D'CMAKE_BUILD_TYPE=Debug' -D'CMAKE_SYSTEM_VERSION=10.0.10586.0' -D'CMAKE_SYSTEM_NAME=Windows' -B'win' -H'.'",
+            "problemMatcher": []
+        },
+        {
+            "label": "build win",
+            "dependsOn": "build win cmake",
+            "type": "shell",
+            "command": "mingw32-make -C win",
+            "problemMatcher": []
+        },
+        {
+            "label": "build unix cmake",
+            "type": "shell",
+            "command": "cmake -G'Unix Makefiles' -D'CMAKE_BUILD_TYPE=Debug' -D'CMAKE_SYSTEM_VERSION=3.4.0' -D'CMAKE_SYSTEM_NAME=Linux' -B'unix' -H'.'",
+            "problemMatcher": []
         },
         {
             "label": "build unix",
+            "dependsOn": "build unix cmake",
             "type": "shell",
-            "command": "./build_unix.sh",
+            "command": "make -C unix",
+            "problemMatcher": []
+        },
+        {
+            "label": "build wsl unix cmake",
+            "type": "shell",
+            "command": "wsl cmake -G'Unix Makefiles' -D'CMAKE_BUILD_TYPE=Debug' -D'CMAKE_SYSTEM_VERSION=3.4.0' -D'CMAKE_SYSTEM_NAME=Linux' -B'unix' -H'.'",
             "problemMatcher": []
         },
         {
             "label": "build wsl unix",
+            "dependsOn": "build wsl unix cmake",
             "type": "shell",
-            "command": "wsl ./build_unix.sh",
+            "command": "wsl make -C unix",
             "problemMatcher": []
         }
     ]
