@@ -8,7 +8,8 @@
         "telemetry.enableTelemetry": false,
         "telemetry.enableCrashReporter": false,
         "files.associations": {
-            "ostream": "cpp"
+            "ostream": "cpp",
+            "iostream": "cpp"
         }
     }
 }

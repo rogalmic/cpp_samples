@@ -53,7 +53,7 @@
             "stopAtEntry": false,
             "cwd": "/mnt/c/Users/rogalmic/Documents/src/cpp/unix",
             "environment": [],
-            "externalConsole": false, // NOT SUPPORTED for WSL
+            "externalConsole": false, // https://github.com/OmniSharp/omnisharp-vscode/issues/2313
             "MIMode": "gdb",
             "setupCommands": [
                 {
