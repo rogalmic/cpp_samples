@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch Win32",
+            "name": "gdb-win",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/win/output/bin/addressbook.exe",
+            "program": "${workspaceRoot}/win/output/bin/gnu_cpp_tutorial.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
@@ -20,13 +20,13 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build address book windows"
+            "preLaunchTask": "build win"
         },
         {
-            "name": "(gdb) Launch Linux",
+            "name": "gdb-unix",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/unix/output/bin/addressbook",
+            "program": "${workspaceRoot}/unix/output/bin/gnu_cpp_tutorial",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
@@ -41,13 +41,13 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build address book linux"
+            "preLaunchTask": "build unix"
         },
         {
-            "name": "(gdb) Launch WSL Linux",
+            "name": "gdb-unix (wsl)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/mnt/c/Users/rogalmic/Documents/src/cpp/unix/output/bin/addressbook",
+            "program": "/mnt/c/Users/rogalmic/Documents/src/cpp/unix/output/bin/gnu_cpp_tutorial",
             "args": [],
             "stopAtEntry": false,
             "cwd": "/mnt/c/Users/rogalmic/Documents/src/cpp/unix",
@@ -67,7 +67,7 @@
                 "pipeArgs": ["-c"],
                 "debuggerPath": "/usr/bin/gdb"
             },
-            "preLaunchTask": "build address book wsl linux"
+            "preLaunchTask": "build wsl unix"
             ,
             "sourceFileMap": {
                 "/mnt/c": "c:/"

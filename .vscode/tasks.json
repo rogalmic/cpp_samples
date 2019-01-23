@@ -1,25 +1,26 @@
 {
+    // https://code.visualstudio.com/docs/languages/cpp
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build address book windows",
+            "label": "build win",
             "type": "shell",
-            "command": "./build_win32.bat",
+            "command": "./build_win.bat",
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
         },
         {
-            "label": "build address book linux",
+            "label": "build unix",
             "type": "shell",
-            "command": "./build_linux.sh",
+            "command": "./build_unix.sh",
             "problemMatcher": []
         },
         {
-            "label": "build address book wsl linux",
+            "label": "build wsl unix",
             "type": "shell",
-            "command": "wsl ./build_linux.sh",
+            "command": "wsl ./build_unix.sh",
             "problemMatcher": []
         }
     ]
