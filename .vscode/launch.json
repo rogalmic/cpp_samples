@@ -64,7 +64,7 @@
             ],
             "pipeTransport": {
                 "pipeCwd": "",
-                "pipeProgram": "c:/windows/sysnative/bash.exe",
+                "pipeProgram": "${env:windir}/sysnative/bash.exe",
                 "pipeArgs": ["-c"],
                 "debuggerPath": "/usr/bin/gdb"
             },
