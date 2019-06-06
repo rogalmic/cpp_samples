@@ -7,5 +7,11 @@
     "editor.trimAutoWhitespace": true,
     "editor.autoClosingBrackets": "languageDefined",
     "editor.formatOnSave": false,
-    "C_Cpp.intelliSenseEngine": "Default"
+    "C_Cpp.intelliSenseEngine": "Default",
+    "files.associations": {
+        "algorithm": "cpp",
+        "ostream": "cpp",
+        "initializer_list": "cpp",
+        "iostream": "cpp"
+    }
 }

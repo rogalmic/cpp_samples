@@ -6,14 +6,20 @@
 #include <thread>
 #include <mutex>
 #include <chrono>
+#include <random>
 
 void sort_test();
 void thread_test();
+void randomize_test();
 
 int main(int argc, char *const argv[], char *const envp[])
 {
     sort_test();
     thread_test();
+    randomize_test();
+
+    std::cout << "Press ENTER to exit..." << std::endl << std::flush;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 }
 
 void sort_test()
@@ -59,4 +65,21 @@ void thread_test()
     }
 
     std::cout << "Joined" << std::endl;
+}
+
+void randomize_test()
+{
+    std::random_device rd;
+    std::mt19937 gen(rd());
+
+    std::uniform_int_distribution<int> dist;
+
+    std::cout << "Generating..." << std::endl;
+
+    for (int n = 0; n < 10; ++n)
+    {
+        std::cout << dist(gen) << ' ';
+    }
+
+    std::cout << std::endl << "Generated" << std::endl;
 }
