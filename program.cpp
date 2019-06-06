@@ -4,6 +4,8 @@
 #include <vector>
 #include <algorithm>
 #include <thread>
+#include <mutex>
+#include <chrono>
 
 void sort_test();
 void thread_test();
@@ -38,10 +40,13 @@ void thread_test()
     const int num_threads = 10;
 
     std::thread t[num_threads];
+    std::mutex mutex;    
 
     for (int i = 0; i < num_threads; ++i)
     {
-        t[i] = std::thread([](int tid) {
+        t[i] = std::thread([&](int tid) {
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            std::lock_guard<std::mutex> guard(mutex);
             std::cout << "Launched by thread " << tid << std::endl;
         }, i);
     }
@@ -52,4 +57,6 @@ void thread_test()
     {
         t[i].join();
     }
+
+    std::cout << "Joined" << std::endl;
 }
