@@ -4,7 +4,6 @@
 #include <vector>
 #include <algorithm>
 #include <thread>
-using namespace std;
 
 void sort_test();
 void thread_test();
@@ -17,13 +16,13 @@ int main(int argc, char *const argv[], char *const envp[])
 
 void sort_test()
 {
-    vector<int> vect({445, 10, 15, 20, 20, 23, 42, 45}); 
+    std::vector<int> vect({445, 10, 15, 20, 20, 23, 42, 45}); 
 
     std::cout << "Before: ";
 
     for_each(vect.begin(), vect.end(), [](auto& v) {std::cout << v << ' ';});
     
-    std::cout << endl;
+    std::cout << std::endl;
 
     sort(vect.begin(), vect.end()); 
 
@@ -31,7 +30,7 @@ void sort_test()
 
     for_each(vect.begin(), vect.end(), [](auto& v) {std::cout << v << ' ';});
 
-    std::cout << endl;
+    std::cout << std::endl;
 }
 
 void thread_test()
